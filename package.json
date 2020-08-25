@@ -5,6 +5,7 @@
   "dependencies": {
     "apollo-server-express": "^2.16.1",
     "body-parser": "^1.19.0",
+    "creditcard-generator": "^0.0.7",
     "express": "^4.17.1",
     "jest": "^26.4.2",
     "sequelize": "^6.3.4"
