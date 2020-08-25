@@ -1,3 +1,19 @@
+- [Wallet simulation](#wallet-simulation)
+  * [Prequisite](#prequisite)
+  * [First start](#first-start)
+  * [Start up the application](#start-up-the-application)
+- [API Documentation](#api-documentation)
+  * [Query](#query)
+    + [Accecssing User Information](#accecssing-user-information)
+    + [View Ledger](#view-ledger)
+  * [Mutations](#mutations)
+    + [Create a wallet](#create-a-wallet)
+    + [Create a card](#create-a-card)
+    + [Transfer money between any pair (Wallet, Card)](#transfer-money-between-any-pair--wallet--card-)
+    + [Block a card](#block-a-card)
+  * [Type definitions](#type-definitions)
+
+
 # Wallet simulation
 
 ## Prequisite
