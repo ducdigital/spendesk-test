@@ -18,6 +18,7 @@
 
 ## Prequisite
 - This application use Node 14.
+- SQLite (included)
 
 ## First start
 - Run `yarn install`
@@ -27,6 +28,10 @@
 ## Start up the application
 You can either run `node ./src/app.mjs` or `yarn dev`. This will start up the application in dev mode 
 
+## TODO:
+- [ ] Add currency conversion method with external API
+- [ ] Allow cross currency transfer with conversion fee
+- [ ] Specs
 ------
 
 
