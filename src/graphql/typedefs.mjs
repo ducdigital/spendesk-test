@@ -2,22 +2,22 @@ import apolloServerExpress from 'apollo-server-express';
 const { gql } = apolloServerExpress;
 export default gql`
   type Query {
-    user: User
+    user(id: ID!): User
+    cards(user: ID!): [Card]
+    wallets(user: ID!): [Wallet]
   }
   type User {
     id: ID!
+    name: String
     wallets: [Wallet]
+    cards: [Card]
   }
   type Wallet {
     id: ID!
     balance: Int
     isMasterWallet: Boolean
     currency: CurrencyEnum
-    company: Company
-  }
-  type Company {
-    id: ID!
-    name: String
+    company: String
   }
   type Card {
     id: ID!

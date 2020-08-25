@@ -15,6 +15,6 @@ const app = express();
 const apolloServer = new ApolloServer({ schema: schema });
 
 apolloServer.applyMiddleware({ app });
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`Application started at ${PORT}`);
 });

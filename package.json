@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "engines": {
     "node": ">=12 "
   },
@@ -11,9 +10,11 @@
     "sequelize": "^6.3.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^6.2.0",
+    "sqlite3": "^5.0.0"
   },
   "scripts": {
-    "dev": "./node_modules/nodemon/bin/nodemon.js ./src/app.js"
+    "dev": "./node_modules/nodemon/bin/nodemon.js ./src/app.mjs"
   }
 }
