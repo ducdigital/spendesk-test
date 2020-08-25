@@ -20,7 +20,6 @@ module.exports = {
       },
       company: {
         type: Sequelize.STRING,
-        unique: true,
       },
       isMasterWallet: {
         type: Sequelize.BOOLEAN

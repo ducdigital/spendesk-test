@@ -13,6 +13,7 @@ export default gql`
   type Query {
     # Fetch the user
     user(id: ID!): User
+    ledger: [Transfer]
   }
 
   type Mutation {
@@ -23,7 +24,7 @@ export default gql`
     createCard(walletId: ID!): Card
 
     # Transfer money between any pair (Wallet, Card) 
-    loadMoney(amount: Int, from: entityTypeEnum, to: entityTypeEnum): Transfer
+    loadMoney(amount: Int!, fromType: entityTypeEnum!, fromId: ID!, toType: entityTypeEnum!, toId: ID!): Transfer
 
     # Block a card
     blockCard(id: ID!): Card
@@ -62,14 +63,14 @@ export default gql`
     targetCurrency: CurrencyEnum
     conversionFee: Int
     originEntityType: entityTypeEnum
-    originEntityID: ID
+    originEntityId: ID
     targetEntityType: entityTypeEnum
-    targetEntityID: ID
+    targetEntityId: ID
   }
 
   enum entityTypeEnum {
-    CARD
-    WALLET
+    card
+    wallet
   }
 
   enum CurrencyEnum {
