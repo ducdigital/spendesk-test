@@ -13,6 +13,8 @@ export default gql`
   type Query {
     # Fetch the user
     user(id: ID!): User
+
+    # Return a list of all transfer made by user
     ledger: [Transfer]
   }
 

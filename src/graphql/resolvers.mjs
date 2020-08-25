@@ -40,10 +40,11 @@ const resolvers = {
         const wallet = await db.Wallet.findOne({
           where: { id: walletId }
         }, { transaction: t });
-        console.log(db.Card.generateRandomCCV());
+        
         if (!wallet) {
           throw new Error('No Wallet Found');
         }
+        
         const timeNow = new Date();
         return await db.Card.create({
           userId: wallet.userId,
